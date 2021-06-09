@@ -1,0 +1,141 @@
+@import-normalize;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul,
+ol {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul,
+ol {
+    list-style: none;
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+// ---------- RESET CSS ----------
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1;
+    font-weight: 600;
+}
+
+h2 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+a,
+li,
+button {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+p.small-text {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 0.8rem;
+    line-height: 1;
+    font-weight: 300;
+}
+
+/* // phones */
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* // portrait tablets */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/* // landscape tablets */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* // small desktop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* // big desktops */
+@media screen and (min-width: 1201px) {
+    html {
+        font-size: 20px;
+    }
+}
