@@ -1,0 +1,7 @@
+@import '../../sassVariables';
+
+.canvas {
+    padding: 2rem 1rem;
+    min-height: calc(100vh - 40px);
+    background-color: $background-color;
+}
