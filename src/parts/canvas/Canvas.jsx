@@ -9,7 +9,7 @@ const Canvas = (props) => {
     </main>;
 };
 
-//Provides a canvas for the pages to display
+// * the pages that are pass to the canvas
 Canvas.propTypes = { children: PropTypes.element }
 
 export default Canvas;

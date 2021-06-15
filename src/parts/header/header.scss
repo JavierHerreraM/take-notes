@@ -1,0 +1,107 @@
+@import '../../sassVariables';
+
+// * the main container
+.page-header {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    color: $background-color;
+    background-color: $primary-color;
+}
+
+// * contains the logo, title and menu button
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 1rem;
+    height: 40px;
+    max-height: 40px;
+
+    // * sets the logo div to a set width, otherwise it gets a weird size
+    svg {
+        height: 100%;
+        width: 47px;
+    }
+
+    button {
+        padding: 0;
+        border: none;
+        font-size: 26px;
+        color: inherit;
+        background-color: inherit;
+    }
+}
+
+// * navigation with the links
+.main-navigation {
+    height: 0px;
+
+    transition: height 0.5s;
+
+    ul {
+        width: 100%;
+        text-align: center;
+    }
+
+    li {
+        margin-bottom: 2rem;
+    }
+
+    ul :first-child {
+        margin-top: 1rem;
+    }
+
+    ul :last-child {
+        margin-bottom: 1rem;
+    }
+}
+
+// * The set height of the nav menu for the animations
+@media screen and (max-width: 768px) {
+    .open {
+        height: 312px;
+    }
+}
+
+// * The set height of the nav menu for the animations
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .open {
+        height: 350px;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .page-header {
+        width: 20vw;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .header {
+        height: 25vh;
+        max-height: 25vh;
+        padding: 1.5rem;
+
+        svg {
+            width: 100%;
+        }
+
+        h1,
+        button {
+            display: none;
+        }
+    }
+
+    .main-navigation {
+        height: 75vh;
+        padding: 1rem 2rem;
+        justify-content: start;
+        transition: none;
+
+        ul {
+            text-align: left;
+        }
+    }
+}

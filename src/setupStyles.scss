@@ -1,19 +1,19 @@
 @import-normalize;
 
-/* Box sizing rules */
+// * Box sizing rules 
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* Remove default padding */
+// * Remove default padding 
 ul,
 ol {
     padding: 0;
 }
 
-/* Remove default margin */
+// * Remove default margin 
 body,
 h1,
 h2,
@@ -31,7 +31,7 @@ dd {
     margin: 0;
 }
 
-/* Remove list styles on ul, ol elements with a class attribute */
+// * Remove list styles on ul, ol elements with a class attribute 
 ul,
 ol {
     list-style: none;
@@ -42,13 +42,13 @@ body {
     line-height: 1.5;
 }
 
-/* Make images easier to work with */
+// * Make images easier to work with 
 img {
     max-width: 100%;
     display: block;
 }
 
-/* Inherit fonts for inputs and buttons */
+// * Inherit fonts for inputs and buttons 
 input,
 button,
 textarea,
@@ -56,7 +56,7 @@ select {
     font: inherit;
 }
 
-/* Remove all animations and transitions for people that prefer not to see them */
+// * Remove all animations and transitions for people that prefer not to see them 
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -66,7 +66,7 @@ select {
     }
 }
 
-// ---------- RESET CSS ----------
+// * ---------- RESET CSS ----------
 
 h1 {
     font-family: 'Quicksand', sans-serif;
@@ -105,35 +105,21 @@ p.small-text {
     font-weight: 300;
 }
 
-/* // phones */
-@media screen and (max-width: 576px) {
+// * phones - portrait tablets
+@media screen and (max-width: 768px) {
     html {
         font-size: 16px;
     }
 }
 
-/* // portrait tablets */
-@media screen and (min-width: 577px) and (max-width: 768px) {
-    html {
-        font-size: 16px;
-    }
-}
-
-/* // landscape tablets */
-@media screen and (min-width: 769px) and (max-width: 992px) {
+// * landscape tablets - small desktop
+@media screen and (min-width: 769px) and (max-width: 1200px) {
     html {
         font-size: 18px;
     }
 }
 
-/* // small desktop */
-@media screen and (min-width: 993px) and (max-width: 1200px) {
-    html {
-        font-size: 18px;
-    }
-}
-
-/* // big desktops */
+// * big desktops
 @media screen and (min-width: 1201px) {
     html {
         font-size: 20px;
