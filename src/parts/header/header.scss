@@ -36,7 +36,7 @@
 // * navigation with the links
 .main-navigation {
     height: 0px;
-
+    overflow: hidden;
     transition: height 0.5s;
 
     ul {
