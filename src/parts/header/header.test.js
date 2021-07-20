@@ -17,22 +17,17 @@ describe('Page header and main navigation', () => {
         expect(screen.getByRole('banner')).toBeVisible();
     });
 
-    it('should toggle the navigation when the user clicks the menu button', () => {
-        const button = screen.getByRole('button');
-
-        userEvent.click(button);
+    it('should toggle the navigation when the menu button is clicked', () => {
+        userEvent.click(screen.getByRole('button'));
         expect(screen.getByRole('navigation')).toHaveClass('open');
 
-        userEvent.click(button);
+        userEvent.click(screen.getByRole('button'));
         expect(screen.getByRole('navigation')).toHaveClass('close');
     });
 
-    it('should close the navigation if one option is clicked', () => {
-        const button = screen.getByRole('button');
-        const menuOption = screen.getByText('Home');
-
-        userEvent.click(button);
-        userEvent.click(menuOption);
+    it('should close the navigation if one menu option is clicked', () => {
+        userEvent.click(screen.getByRole('button'));
+        userEvent.click(screen.getByText('Home'));
         expect(screen.getByRole('navigation')).toHaveClass('close');
     });
 

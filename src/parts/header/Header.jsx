@@ -15,7 +15,7 @@ const Header = () => {
 
     return <header className='page-header'>
         <div className='header'>
-            <LogoIcon className='ayuda' />
+            <LogoIcon />
             <h1>Sample Title</h1>
             <button type='button' onClick={handleMenuClick}><FontAwesomeIcon icon={faBars} /></button>
         </div>

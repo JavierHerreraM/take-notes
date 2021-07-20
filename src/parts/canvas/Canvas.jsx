@@ -10,6 +10,11 @@ const Canvas = (props) => {
 };
 
 // * the pages that are pass to the canvas
-Canvas.propTypes = { children: PropTypes.element }
+Canvas.propTypes = {
+    children: PropTypes.oneOfType([
+        PropTypes.element,
+        PropTypes.PropTypes.arrayOf(PropTypes.element)
+    ]),
+}
 
 export default Canvas;
