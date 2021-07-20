@@ -1,0 +1,28 @@
+@import '../../sassVariables';
+
+// * the main container
+.home-page {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $primary-color;
+}
+
+// * gives all children a margin
+.home-page>* {
+    margin-bottom: 2rem;
+}
+
+// *  The first child is always set to be the logo, gives it minimum size and a 
+// * max width to control its size, also it has a specific margin
+
+.home-page> :first-child {
+    min-width: 150px;
+    max-width: 65%;
+    min-height: 96px;
+    margin-bottom: 6rem;
+}
