@@ -1,0 +1,38 @@
+@import '../../sassVariables';
+
+// * The main styles for the button
+.button {
+    width: 150px;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: $radius;
+    color: $background-color;
+    background-color: $primary-color;
+}
+
+// * Makes the button resize to the container width if the class large is passed
+.button.large {
+    width: 100%;
+}
+
+// * Three styles for different backgrounds colors, depending on the passed class
+.button.success {
+    color: $background-color;
+    background-color: $success-color;
+}
+
+.button.warning {
+    color: $background-color;
+    background-color: $warning-color;
+}
+
+.button.background {
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+
+// * In case that the button has an icon it gives the icon a margin
+.button> :nth-child(1) {
+    margin-left: 1rem;
+}
