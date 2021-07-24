@@ -2,27 +2,48 @@
 
 // * the main container
 .home-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
     width: 100vw;
-    min-height: 100vh;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: $primary-color;
-}
 
-// * gives all children a margin
-.home-page>* {
-    margin-bottom: 2rem;
+    div {
+        display: flex;
+        flex-direction: column;
+
+        &>:first-child {
+            margin-bottom: 2rem;
+        }
+    }
 }
 
 // *  The first child is always set to be the logo, gives it minimum size and a 
 // * max width to control its size, also it has a specific margin
-
 .home-page> :first-child {
     min-width: 150px;
     max-width: 65%;
     min-height: 96px;
-    margin-bottom: 6rem;
+    max-height: 25%;
+    margin-bottom: 3rem;
+}
+
+
+
+// * landscape tablets - small desktop
+@media screen and (min-width: 769px) {
+    .home-page div {
+        flex-direction: row;
+
+        &> :first-child {
+            margin-bottom: 0;
+            margin-right: 4rem;
+        }
+    }
 }

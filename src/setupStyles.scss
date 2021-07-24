@@ -91,11 +91,19 @@ p {
 
 a,
 li,
-button {
+button,
+label {
     font-family: 'Quicksand', sans-serif;
     font-size: 1.25rem;
     line-height: 1;
     font-weight: 500;
+}
+
+input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    line-height: 1;
+    font-weight: 400;
 }
 
 p.small-text {

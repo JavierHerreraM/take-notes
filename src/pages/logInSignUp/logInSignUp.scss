@@ -1,0 +1,43 @@
+@import '../../sassVariables';
+
+.sign-up-log-in {
+    min-width: 100%;
+}
+
+.sign-up-form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+        margin-bottom: 0.5rem;
+        color: $primary-color;
+    }
+
+    input {
+        height: 2rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 2rem;
+        border: none;
+        border-radius: $radius;
+        color: $primary-color;
+        background-color: $secondary-color;
+
+        &:focus {
+            outline: none;
+            border: 2px solid $primary-color;
+        }
+    }
+}
+
+// * landscape tablets - small desktop
+@media screen and (min-width: 769px) {
+    .sign-up-log-in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sign-up-form {
+        width: 400px;
+    }
+}

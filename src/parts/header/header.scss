@@ -55,9 +55,15 @@
     ul :last-child {
         margin-bottom: 1rem;
     }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 }
 
 // * The set height of the nav menu for the animations
+// * phones - portrait tablets
 @media screen and (max-width: 768px) {
     .open {
         height: 312px;
@@ -65,12 +71,19 @@
 }
 
 // * The set height of the nav menu for the animations
+// * landscape tablets - small desktop
 @media screen and (min-width: 769px) and (max-width: 1200px) {
     .open {
         height: 350px;
     }
+
+    .header svg {
+        width: auto;
+        max-height: 26px;
+    }
 }
 
+// * big desktops
 @media screen and (min-width: 1201px) {
     .page-header {
         width: 20vw;
