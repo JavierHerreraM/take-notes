@@ -14,6 +14,7 @@
     align-items: center;
     background-color: $primary-color;
 
+    // * Gives the first button a margin for separation
     div {
         display: flex;
         flex-direction: column;
@@ -26,6 +27,7 @@
 
 // *  The first child is always set to be the logo, gives it minimum size and a 
 // * max width to control its size, also it has a specific margin
+// ! This needs to be update to handle the logo for big screens
 .home-page> :first-child {
     min-width: 150px;
     max-width: 65%;
@@ -34,13 +36,12 @@
     margin-bottom: 3rem;
 }
 
-
-
 // * landscape tablets - small desktop
 @media screen and (min-width: 769px) {
     .home-page div {
         flex-direction: row;
 
+        // * Changes the position of the margin of the button
         &> :first-child {
             margin-bottom: 0;
             margin-right: 4rem;

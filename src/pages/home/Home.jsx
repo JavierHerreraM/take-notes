@@ -10,9 +10,12 @@ import { ReactComponent as LogoIconBig } from '../../assets/svg/take-notes-icon2
 
 const Home = () => {
 
+    // * isTabletOrBigger is used to change the logo on mid to big screens
     const isTabletOrBigger = useMediaQuery({ query: '(min-width: 769px)' });
+    // * history is used to redirect the user when a button is clicked
     let history = useHistory();
 
+    // * This redirects the user to a new page depending on which button was pressed
     const handleClick = (event) => {
         const { name } = event.target;
         if (name === 'signUp') {
@@ -29,17 +32,15 @@ const Home = () => {
 
         <div>
             <Button
-                text='Sign Up'
                 color='background'
                 action={handleClick}
                 name='signUp'
-            />
+            >Sign up</Button>
             <Button
-                text='Log In'
                 color='background'
                 action={handleClick}
                 name='logIn'
-            ></Button>
+            >Log in</Button>
         </div>
     </section>;
 }

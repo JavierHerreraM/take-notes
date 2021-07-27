@@ -1,12 +1,13 @@
 import { render, screen } from '@testing-library/react'
 import '@testing-library/jest-dom';
 import userEvent from '@testing-library/user-event';
+import { StaticRouter } from 'react-router-dom';
 import Header from './Header';
 
 //* Tests for user interaction
-describe('Page header and main navigation', () => {
+describe('----- Page header and main navigation -----', () => {
     beforeEach(() => {
-        render(<Header />);
+        render(<StaticRouter><Header /></StaticRouter>);
 
         //* set the screen size to small screen
         window.innerWidth = 500;

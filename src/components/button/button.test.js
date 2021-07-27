@@ -5,19 +5,18 @@ import Button from './Button';
 let button = null;
 const TEXT = 'Click me!';
 
-describe('Button component', () => {
+describe('----- Button component -----', () => {
     beforeEach(() => {
-        render(<Button text={TEXT} icon={true} />);
+        render(<Button>{TEXT}<a>link</a></Button>);
         button = screen.getByRole('button');
     });
 
-    it('should show some text', () => {
+    it('should show some text inside the button', () => {
         expect(button).toHaveTextContent(TEXT);
     });
 
-    it('should show an icon inside the button', () => {
-        expect(button).toContainElement(screen.getByRole('img'));
-        expect(screen.getByRole('img')).toBeVisible();
+    it('should show a link with the text: link', () => {
+        expect(button).toContainElement(screen.getByText('link'));
     });
 
 });

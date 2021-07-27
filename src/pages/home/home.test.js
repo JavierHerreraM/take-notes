@@ -1,12 +1,14 @@
 import { render, screen } from "@testing-library/react";
+import userEvent from '@testing-library/user-event';
 import '@testing-library/jest-dom';
+import { StaticRouter } from 'react-router-dom';
 import Home from './Home';
 
 let homePage = null;
 
-describe('Home page', () => {
+describe('----- Home page -----', () => {
     beforeEach(() => {
-        render(<Home />);
+        render(<StaticRouter><Home /></StaticRouter>);
         homePage = screen.getByRole('region', { name: /home page/i });
     });
     
@@ -28,5 +30,4 @@ describe('Home page', () => {
         expect(homePage).toContainElement(screen.getByText(/log in/i));
         expect(screen.getByText(/log in/i)).toBeVisible();
     });
-
 });

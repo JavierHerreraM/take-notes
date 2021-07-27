@@ -1,8 +1,6 @@
 @import '../../sassVariables';
 
-.sign-up-log-in {
-    min-width: 100%;
-}
+// ! I need to fix the height of the links so it doesn't show when the screen changes size
 
 .sign-up-form {
     display: flex;
@@ -22,6 +20,7 @@
         color: $primary-color;
         background-color: $secondary-color;
 
+        // * Adds a custom style for the focus of the inputs
         &:focus {
             outline: none;
             border: 2px solid $primary-color;
@@ -37,6 +36,7 @@
         align-items: center;
     }
 
+    // * Gives the inputs a define size so they don't stretch to full width
     .sign-up-form {
         width: 400px;
     }

@@ -6,9 +6,11 @@ import './logInSignUp.scss';
 const LogInSignUp = () => {
     // * Location is used for defining which parts to show depending on the url
     const location = useLocation().pathname.replace('/', '').split('-').join(' ');
+    // * If sign up is true then it will show the respective components
     const signUp = location === 'sign up' ? true : false;
 
     // * States
+    // ! Should change the default state to match the inputs
     let [info, setInfo] = useState({
         firstName: '',
         lastName: '',
@@ -17,6 +19,7 @@ const LogInSignUp = () => {
         confirmPassword: '',
     });
 
+    // * The controller for the inputs of the page
     const handleInfoChange = (event) => {
         const { name, value } = event.target;
         setInfo(preValues => {
@@ -27,11 +30,13 @@ const LogInSignUp = () => {
         });
     }
 
+    // * Function that is called when the submit button is clicked
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(info);
     }
 
+    // ! I need to change this class name and the form one to a more concise ones
     return <section aria-label={location} className='sign-up-log-in'>
         <form className='sign-up-form' onSubmit={handleSubmit}>
             {signUp && <>
@@ -55,7 +60,7 @@ const LogInSignUp = () => {
                 <input id='confirmPassword' name='confirmPassword' type="text" placeholder='Confirm password' value={info.confirmPassword} onChange={handleInfoChange} />
             </>}
 
-            <Button type='submit' text={signUp ? 'Confirm' : 'Enter'} large={true} />
+            <Button type='submit' large={true} >{signUp ? 'Confirm' : 'Enter'}</Button>
         </form>
     </section>;
 }
